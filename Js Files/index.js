@@ -47,7 +47,8 @@ function showNotes() {
                     <h5 class="card-title" >${titleObj[index]}</h5>
                     <hr>
                     <p class="card-text">${element}</p>
-                    <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                    <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button><br><br>
+                    <button id="${index}" onclick="downloadNote(this.id)" class="btn btn-primary">Download Note As PDF</button>
                     </div>
                 </div>`;
     });
@@ -56,6 +57,31 @@ function showNotes() {
         notesElm.innerHTML = html;
     else
         notesElm.innerHTML = `Nothing to show`;
+}
+
+function downloadNote(index){
+    let notes = localStorage.getItem("notes");
+    if (notes == null)
+        notesObj = [];
+    else
+        notesObj = JSON.parse(notes); 
+    let content = notesObj[index];
+
+    let titles = localStorage.getItem("titles");
+    if(titles == null)
+        titleObj = [];
+    else 
+        titleObj = JSON.parse(titles);
+    let title = titleObj[index];
+
+    var pdf = new jsPDF('p', 'in', 'letter'),font, size, lines,margin = 0.5,verticalOffset = margin + 1,loremipsum = content;
+    pdf.setLineWidth(1 / 72);
+    font = ['Times', 'Roman']
+    size = 12
+    pdf.setFontSize(20).text(0.5,1,title);
+    lines = pdf.setFont(font[0], font[1]).setFontSize(size).splitTextToSize(loremipsum, 7.5);
+    pdf.text(0.5, verticalOffset + size / 72, lines)
+    pdf.save(title + '.pdf');
 }
 
 function deleteNote(index){
