@@ -56,7 +56,7 @@ function showNotes() {
     if(notesObj.length != 0)
         notesElm.innerHTML = html;
     else
-        notesElm.innerHTML = `Nothing to show`;
+        notesElm.innerHTML = `Nothing to Show, Please Add Some Notes Which Will Later Appear Here`;
 }
 
 function downloadNote(index){
