@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F4NWPCYVW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2F4NWPCYVW');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/CSS Files/main.css" />
@@ -24,33 +15,35 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:blue;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Notes Mania</a>
-      <h1 style="color: white;">Welcome to Notes Mania</h1>
+      <h1 style="color: white;">Welcome To Notes Mania</h1>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" id="searchTxt" placeholder="Search" aria-label="Search" />
+        <input class="form-control me-2" type="search" id="searchTxt" placeholder="Search Note" aria-label="Search" />
       </form>
     </div>
     </div>
   </nav>
   <!-- Container -->
   <div class="container my-3">
+    <h5 style="color: white;">Notes Mania is a web application, where you can write notes, save them on your browser and can even download your notes as PDF file on your local machine.</h5>
+    <br>  
     <!-- Add A Note  -->
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Add Note Title</h5>
+        <h5 class="card-title">Write Note Title</h5>
         <div class="mb-3">
           <textarea class="form-control" id="addTlt"  id="exampleFormControlTextarea1" rows="1"></textarea>
         </div>
-        <h5 class="card-title">Add Note</h5>
+        <h5 class="card-title">Write Note</h5>
         <div class="mb-3">
-          <textarea class="form-control" id="addTxt" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="addTxt" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
         <button class="btn btn-primary" id="addBtn">Add Note</button>
       </div>
     </div>
     <!-- Your Notes -->
-    <hr />
+    <hr style="color: white;" />
     <h1 style="color: white;">Your Notes</h1>
-    <hr />
+    <hr style="color: white;" />
     <!-- Notes -->
     <div id="notes" style="color: white;" class="row container-fluid"></div>
   </div>
