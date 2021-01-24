@@ -9,7 +9,12 @@ window.onload = function () {
             titleObj = [];
         else 
             titleObj = JSON.parse(titles);
-        titleObj.push(addTlt.value);
+
+        if(addTlt.value == "")
+            titleObj.push("Empty Title");
+        else
+            titleObj.push(addTlt.value);
+        console.log(titleObj);
         localStorage.setItem("titles", JSON.stringify(titleObj));
         addTlt.value = "";
 
@@ -19,7 +24,11 @@ window.onload = function () {
             notesObj = [];
         else 
             notesObj = JSON.parse(notes);
-        notesObj.push(addTxt.value);
+
+        if(addTxt.value == "")
+            notesObj.push("Please Write Some Note.");
+        else
+            notesObj.push(addTxt.value);
         localStorage.setItem("notes", JSON.stringify(notesObj)); // convert object into string
         addTxt.value = "";
         showNotes();
@@ -56,7 +65,7 @@ function showNotes() {
     if(notesObj.length != 0)
         notesElm.innerHTML = html;
     else
-        notesElm.innerHTML = `Nothing to Show, Please Add Some Notes Which Will Later Appear Here`;
+        notesElm.innerHTML = `Nothing to Show, Please Add Some Notes Which Will Later Appear Here.`;
 }
 
 function downloadNote(index){
