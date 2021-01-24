@@ -2,87 +2,87 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F4NWPCYVW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F4NWPCYVW"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-    gtag('config', 'G-2F4NWPCYVW');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/CSS Files/main.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  <title>Notes Mania</title>
+	gtag('config', 'G-2F4NWPCYVW');
+	</script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/CSS Files/main.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+	<title>Notes Mania</title>
 </head>
 
 <body class="bg-dark">
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:blue;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Notes Mania</a>
-      <h1 style="color: white;">Welcome To Notes Mania</h1>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" id="searchTxt" placeholder="Search Note" aria-label="Search" />
-      </form>
-    </div>
-    </div>
-  </nav>
-  <!-- Container -->
-  <div class="container my-3">
-    <h5 style="color: white;">Notes Mania is a web application, where you can write notes, save them on your browser and can even download your notes as PDF file on your local machine.</h5>
-    <br>  
-    <!-- Add A Note  -->
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Write Note Title</h5>
-        <div class="mb-3">
-          <textarea class="form-control" id="addTlt"  id="exampleFormControlTextarea1" rows="1"></textarea>
-        </div>
-        <h5 class="card-title">Write Note</h5>
-        <div class="mb-3">
-          <textarea class="form-control" id="addTxt" id="exampleFormControlTextarea1" rows="5"></textarea>
-        </div>
-        <button class="btn btn-primary" id="addBtn">Add Note</button>
-      </div>
-    </div>
-    <!-- Your Notes -->
-    <hr style="color: white;" />
-    <h1 style="color: white;">Your Notes</h1>
-    <hr style="color: white;" />
-    <!-- Notes -->
-    <div id="notes" style="color: white;" class="row container-fluid"></div>
-  </div>
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:blue;">
+		<div class="container-fluid">
+		<a class="navbar-brand" href="#">Notes Mania</a>
+		<h1 style="color: white;">Welcome To Notes Mania</h1>
+		<form class="d-flex">
+			<input class="form-control me-2" type="search" id="searchTxt" placeholder="Search Note" aria-label="Search" />
+		</form>
+		</div>
+		</div>
+	</nav>
+	<!-- Container -->
+	<div class="container my-3">
+		<h5 style="color: white;">Notes Mania is a web application, where you can write notes, save them on your browser and can even download your notes as PDF file on your local machine.</h5>
+		<br>  
+		<!-- Add A Note  -->
+		<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">Write Note Title</h5>
+			<div class="mb-3">
+			<textarea class="form-control" id="addTlt"  id="exampleFormControlTextarea1" rows="1"></textarea>
+			</div>
+			<h5 class="card-title">Write Note</h5>
+			<div class="mb-3">
+			<textarea class="form-control" id="addTxt" id="exampleFormControlTextarea1" rows="5"></textarea>
+			</div>
+			<button class="btn btn-primary" id="addBtn">Add Note</button>
+		</div>
+		</div>
+		<!-- Your Notes -->
+		<hr style="color: white;" />
+		<h1 style="color: white;">Your Notes</h1>
+		<hr style="color: white;" />
+		<!-- Notes -->
+		<div id="notes" style="color: white;" class="row container-fluid"></div>
+  	</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
-  <script src="Js Files/index.js"></script>
-  <script>
-    showNotes();
-    let searchnote = document.getElementById('searchTxt');
-    searchnote.addEventListener("input", function () {
-      let inputVal = searchnote.value;
-      let noteCards = document.getElementsByClassName('noteCard');
-      Array.from(noteCards).forEach(function (element) {
-        let cardTxt = element.getElementsByTagName("p")[0].innerHTML;
-        if (cardTxt.includes(inputVal))
-          element.style.display = "block";
-        else
-          element.style.display = "none";
-      })
-    })
-  </script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+		integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+		integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+	<script src="Js Files/index.js"></script>
+	<script>
+		showNotes();
+		let searchnote = document.getElementById('searchTxt');
+		searchnote.addEventListener("input", function () {
+		let inputVal = searchnote.value;
+		let noteCards = document.getElementsByClassName('noteCard');
+		Array.from(noteCards).forEach(function (element) {
+			let cardTxt = element.getElementsByTagName("p")[0].innerHTML;
+			if (cardTxt.includes(inputVal))
+			element.style.display = "block";
+			else
+			element.style.display = "none";
+		})
+		})
+	</script>
 </body>
 
 </html>
